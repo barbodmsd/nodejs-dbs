@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-dbs",
+  "version": "1.0.0",
+  "description": "nothing to say",
+  "main": "index.js",
+  "scripts": {
+  
+  },
+  "author": "",
+  "license": "MIT"
+}
