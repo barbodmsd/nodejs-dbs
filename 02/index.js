@@ -1,12 +1,15 @@
 // Modules
-// Es Module => export | export default | import('file.js')
-// CommonJS Module => module.exports | module.exports.x | require('file')
+// Es Module => export default | export | import
+// CommonJS => module.exports | require
+import x, { myName } from './es.js'
 
-import { sum, myName } from "./es.js";
+// const { sum, subtract, myName } = require("./common");
+// console.log(sum(10,20))
+// console.log(subtract(10,5))
+// console.log(myName)
 
-// const { myName, sum } = require("./common");
-// console.log(sum(10, 20));
-// console.log(myName);
+// const x = require('./common')
+// console.log(x)
 
-console.log(sum(10, 20));
-console.log(myName);
+console.log(x(10, 20));
+console.log(myName)

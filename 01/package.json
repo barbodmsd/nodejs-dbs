@@ -1,11 +1,11 @@
 {
-  "name": "nodejs-dbs",
+  "name": "01",
   "version": "1.0.0",
-  "description": "nothing to say",
+  "description": "",
   "main": "index.js",
   "scripts": {
-  
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Barbod Masoudi",
   "license": "MIT"
 }
