@@ -1,4 +1,5 @@
 const ProductModel = require("../model/product.model");
+const products = require("./../data/products.json");
 
 const findAll = async (req, res) => {
   try {
@@ -28,9 +29,27 @@ const findById = async (req, res) => {
   }
 };
 
+const create = async (req, res) => {
+  try {
+    let bodyData = "";
+    req.on("data", (chunkData) => {
+      bodyData += chunkData.toString();
+    });
+    req.on("end", async () => {
+      const product = { id: products?.length + 1, ...JSON.parse(bodyData) };
+      const result = await ProductModel.create(product);
+      res.writeHead(201, { "content-type": "application/json" });
+      res.end(JSON.stringify(result));
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const ProductController = {
   findAll,
   findById,
+  create,
 };
 
 module.exports = ProductController;
